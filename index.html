@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name — Machine Learning Scientist</title>
+  <meta name="description" content="Portfolio of Your Name, Machine Learning Scientist specializing in PyTorch, RBMs, LLMs (GPT-2), and time series analysis.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%234f8cff'/%3E%3Ctext x='32' y='39' text-anchor='middle' font-size='28' font-family='Arial' fill='white'%3EML%3C/text%3E%3C/svg%3E">
+  <style>
+    :root {
+      --bg: #0b0f14;        /* page background */
+      --text: #e6edf3;      /* primary text */
+      --muted: #9fb0c0;     /* secondary text */
+      --card: #0f1621;      /* card background */
+      --accent: #4f8cff;    /* links / accents */
+      --border: rgba(255,255,255,0.08);
+      --radius: 16px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 ui-sans-serif, -apple-system, system-ui, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"}
+    a{color:var(--text);text-decoration:none}
+    a:hover{color:var(--accent)}
+    .container{max-width:1120px;margin:0 auto;padding:24px}
+    .header{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:12px 0}
+    .brand .title{font-size:clamp(20px, 2vw, 28px);font-weight:700}
+    .brand .subtitle{color:var(--muted)}
+    .nav a{margin-left:16px;color:var(--muted)}
+
+    .hero{margin:32px 0 16px;padding:32px;border:1px solid var(--border);border-radius:var(--radius);
+          background:linear-gradient(180deg, rgba(79,140,255,0.08), transparent 40%)}
+    .hero h1{font-size:clamp(28px,5vw,42px);margin:0 0 8px}
+    .badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+    .badge{padding:6px 10px;border-radius:999px;background:#121a26;border:1px solid var(--border);color:var(--muted);font-size:13px}
+
+    .section{margin:32px 0}
+    .section h2{font-size:clamp(20px,3.2vw,28px);margin:0 0 16px}
+
+    .grid{display:grid;grid-template-columns:repeat(3, minmax(0,1fr));gap:16px}
+    @media (max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:600px){.grid{grid-template-columns:1fr}}
+
+    .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:16px;display:flex;flex-direction:column;gap:12px}
+    .card img{width:100%;height:160px;object-fit:cover;border-radius:12px;border:1px solid var(--border);background:#0c121a}
+    .card h3{margin:0;font-size:18px}
+    .card p{margin:0;color:var(--muted)}
+    .tags{display:flex;flex-wrap:wrap;gap:6px}
+    .tag{font-size:12px;padding:4px 8px;border-radius:999px;border:1px solid var(--border);color:var(--muted)}
+    .links{margin-top:auto;display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:8px 10px;border-radius:10px;border:1px solid var(--border);background:#121a26}
+
+    .footer{color:var(--muted);padding:24px 0;border-top:1px solid var(--border);margin-top:32px}
+  </style>
+</head>
+<body>
+  <header class="container header">
+    <div class="brand">
+      <div class="title">Your Name</div>
+      <div class="subtitle">Machine Learning Scientist</div>
+    </div>
+    <nav class="nav">
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+      <a href="https://github.com/your-username" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero" id="about">
+      <h1>Hi, I’m Your Name.</h1>
+      <p>I build and analyze machine learning systems with a focus on PyTorch, RBMs, and Large Language Models (LLMs, e.g., GPT‑2). Background in Physics; strong in problem‑solving, statistical modeling, and time‑series analysis.</p>
+      <div class="badges">
+        <span class="badge">PyTorch</span>
+        <span class="badge">LLMs</span>
+        <span class="badge">RBMs</span>
+        <span class="badge">Time Series</span>
+        <span class="badge">Optimization</span>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <h2>Projects</h2>
+      <div id="projects-grid" class="grid"></div>
+    </section>
+
+    <section class="section" id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li><strong>Frameworks:</strong> PyTorch, TensorFlow, Scikit‑learn, NumPy, Pandas</li>
+        <li><strong>Models:</strong> Neural Networks, RBMs, Transformers, LLMs (GPT‑2)</li>
+        <li><strong>Techniques:</strong> Multidimensional data analysis, Bayesian inference, time‑series modeling</li>
+        <li><strong>Tools:</strong> Python, Git/GitHub, Jupyter, LaTeX</li>
+      </ul>
+    </section>
+
+    <section class="section" id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a> · LinkedIn: <a href="https://www.linkedin.com/in/your-link" target="_blank" rel="noopener">your-link</a></p>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <div>© <span id="year"></span> Your Name — Built with GitHub Pages</div>
+  </footer>
+
+  <script>
+    // ---- PROJECTS DATA: edit to add your projects ----
+    const PROJECTS = [
+      {
+        title: "Mean-Reversion Trading Bot",
+        summary: "Developed a self-trading bot using mean reversion on real market time-series in collaboration with XSOR Capital.",
+        image: "assets/projects/trading-bot.jpg",
+        tags: ["Time Series", "PyTorch", "Finance"],
+        links: [
+          { label: "Repo", href: "https://github.com/your-username/trading-bot" },
+          { label: "Report", href: "#" }
+        ]
+      },
+      {
+        title: "Energy Analysis of RBMs",
+        summary: "Energy landscape study of RBMs with hyperparameter optimization; explored hidden spaces with PCA, t‑SNE, and clustering.",
+        image: "assets/projects/rbm-analysis.jpg",
+        tags: ["RBM", "Dimensionality Reduction", "Visualization"],
+        links: [
+          { label: "Repo", href: "https://github.com/your-username/rbm-energy-analysis" },
+          { label: "Paper", href: "#" }
+        ]
+      },
+      {
+        title: "Transformer Embedding Dynamics",
+        summary: "Physical/phenomenological analysis of embedding transformations via attention and FFNN components in transformers.",
+        image: "assets/projects/transformers.jpg",
+        tags: ["Transformers", "LLMs", "GPT‑2"],
+        links: [
+          { label: "Repo", href: "https://github.com/your-username/gpt2-embeddings" },
+          { label: "Slides", href: "#" }
+        ]
+      },
+      {
+        title: "Time Series & VBA Market Studies",
+        summary: "Exploratory market studies in VBA and Python; modeling and visualization of multi‑maturity, multi‑strike datasets.",
+        image: "assets/projects/vba-markets.jpg",
+        tags: ["VBA", "Markets", "Visualization"],
+        links: [
+          { label: "Repo", href: "https://github.com/your-username/vba-market-studies" }
+        ]
+      }
+    ];
+
+    // ---- render projects ----
+    function el(tag, attrs = {}, children = []) {
+      const e = document.createElement(tag);
+      for (const [k, v] of Object.entries(attrs)) {
+        if (k === "class") e.className = v;
+        else if (k === "html") e.innerHTML = v;
+        else e.setAttribute(k, v);
+      }
+      for (const c of children) e.appendChild(typeof c === "string" ? document.createTextNode(c) : c);
+      return e;
+    }
+
+    function renderProjects() {
+      const grid = document.getElementById("projects-grid");
+      PROJECTS.forEach((p) => {
+        const card = el("article", { class: "card" });
+        if (p.image) card.appendChild(el("img", { src: p.image, alt: p.title }));
+        card.appendChild(el("h3", { html: p.title }));
+        card.appendChild(el("p", { html: p.summary }));
+        if (p.tags?.length) {
+          const tags = el("div", { class: "tags" });
+          p.tags.forEach((t) => tags.appendChild(el("span", { class: "tag", html: t })));
+          card.appendChild(tags);
+        }
+        if (p.links?.length) {
+          const links = el("div", { class: "links" });
+          p.links.forEach((l) => {
+            const a = el("a", { href: l.href, class: "btn", target: "_blank", rel: "noopener" });
+            a.appendChild(document.createTextNode(l.label));
+            links.appendChild(a);
+          });
+          card.appendChild(links);
+        }
+        grid.appendChild(card);
+      });
+    }
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+    renderProjects();
+  </script>
+</body>
+</html>
