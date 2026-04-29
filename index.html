@@ -43,6 +43,26 @@
     .card img{width:100%;height:160px;object-fit:cover;border-radius:12px;border:1px solid var(--border);background:#0c121a}
     .card h3{margin:0;font-size:18px}
     .card p{margin:0;color:var(--muted)}
+    .card.featured-project{
+      border:1px solid rgba(255, 217, 102, 0.75);
+      box-shadow:0 0 24px rgba(255, 217, 102, 0.22);
+      position:relative;
+    }
+    
+    .featured-label{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      width:max-content;
+      padding:4px 9px;
+      border-radius:999px;
+      background:rgba(255, 217, 102, 0.14);
+      border:1px solid rgba(255, 217, 102, 0.45);
+      color:#ffd966;
+      font-size:12px;
+      font-weight:700;
+      letter-spacing:0.02em;
+    }
     .tags{display:flex;flex-wrap:wrap;gap:6px}
     .tag{font-size:12px;padding:4px 8px;border-radius:999px;border:1px solid var(--border);color:var(--muted)}
     .links{margin-top:auto;display:flex;gap:12px;flex-wrap:wrap}
@@ -156,6 +176,7 @@
     const PROJECTS = [
       {
         title: "Multilingual Fine-Tuning of Language Models",
+        featured: true,
         summary: "Designed and evaluated a multilingual fine-tuning pipeline on a 3B parameter instruction model, studying cross-lingual knowledge transfer.",
         image: "assets/projects/multilingual_finetuning.png",
         tags: ["LLMs", "Fine-Tuning", "Multilingual NLP", "Transformers", "Evaluation"],
@@ -167,7 +188,7 @@
         title: "Bayesian Analysis of LLaMA Representations",
         summary: "Implemented and analyzed a LLaMA-style transformer from scratch, exploring connections between Bayesian inference and language model behavior.",
         image: "assets/projects/llama_bayesian.png",
-        tags: ["LLama", "Transformers", "Bayesian Inference", "Inference"],
+        tags: ["work in Progress", "LLama", "Transformers", "Bayesian Inference", "Inference"],
         links: [
           { label: "Repo", "href": "https://github.com/riccorte/LLama-Bayesian-Analysis" }
         ]
@@ -280,8 +301,12 @@
     function renderProjects() {
       const grid = document.getElementById("projects-grid");
       PROJECTS.forEach((p) => {
-        const card = el("article", { class: "card" });
+        const card = el("article", { class: p.featured ? "card featured-project" : "card" });
         if (p.image) card.appendChild(el("img", { src: p.image, alt: p.title }));
+        if (p.featured) {
+          card.appendChild(el("span", { class: "featured-label", html: "★ Featured Project" }));
+        }
+        
         card.appendChild(el("h3", { html: p.title }));
         card.appendChild(el("p", { html: p.summary }));
         if (p.tags?.length) {
