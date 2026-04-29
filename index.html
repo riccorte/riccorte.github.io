@@ -304,7 +304,7 @@
         const card = el("article", { class: p.featured ? "card featured-project" : "card" });
         if (p.image) card.appendChild(el("img", { src: p.image, alt: p.title }));
         if (p.featured) {
-          card.appendChild(el("span", { class: "featured-label", html: "★ Featured Project" }));
+          card.appendChild(el("span", { class: "featured-label", html: "★ Flagship Project" }));
         }
         
         card.appendChild(el("h3", { html: p.title }));
